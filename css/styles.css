@@ -1,9 +1,16 @@
+.container {
+  left: -628px;
+  top: 204px;
+  width: 1440px;
+  height: 696px;
+  background-color: #fff;
+}
+
 /* Стилі для ul та li */
 .gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: #fff;
   gap: 24px;
 }
 
