@@ -1,35 +1,23 @@
 /* Стилі для ul та li */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #fff;
   gap: 24px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .gallery-item {
-  background: url("path_to_image");
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Стилі для зображень */
 .gallery-image {
-  width: 100%;
-  height: auto;
+  border: 1px solid #000;
+  width: 360px;
+  height: 200px;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-/* Ефекти при наведенні */
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-item:hover .gallery-image {
-  transform: scale(1.05);
+  background: url("path_to_image");
 }
 
 /* Стилі для посилання */

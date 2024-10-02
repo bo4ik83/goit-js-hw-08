@@ -94,15 +94,17 @@ gallery.addEventListener("click", (event) => {
     const largeImageSrc = event.target.dataset.source;
     console.log(`Відкрито зображення: ${largeImageSrc}`);
 
-    // Створюємо екземпляр модального вікна з шаблонною розміткою
     const instance = basicLightbox.create(`
       <img src="${largeImageSrc}" width="1112" height="640">
     `);
 
-    // Відкриваємо модальне вікно
+    // Модальне вікно
     instance.show();
 
-    // Додаємо слухач для закриття модального вікна при натисканні Escape
+    const modalContent = document.querySelector(".basicLightbox");
+    modalContent.style.background = "rgba(46, 47, 66, 0.8)";
+
+    // Закриття модального вікна при натисканні Escape
     window.addEventListener("keydown", (event) => {
       if (event.code === "Escape") {
         instance.close();
